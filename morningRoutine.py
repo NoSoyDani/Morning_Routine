@@ -16,7 +16,7 @@ from aemet import Aemet
 from datetime import datetime
 
 #Obtein an ApiKey here:   https://opendata.aemet.es/centrodedescargas/altaUsuario?
-aemetKey="eyJhbGciOiJIUzI1NiJ9.eyJzdWIiOiJoZWxpby52ZXJzaW9uMUBnbWFpbC5jb20iLCJqdGkiOiIyZWViMzlmYi1hY2U3LTRlZWYtYjQ2ZS1lYjdkMWIwZDgyY2MiLCJpc3MiOiJBRU1FVCIsImlhdCI6MTU5NzYwMzkyMiwidXNlcklkIjoiMmVlYjM5ZmItYWNlNy00ZWVmLWI0NmUtZWI3ZDFiMGQ4MmNjIiwicm9sZSI6IiJ9.-Xh3kjIwSqmb85sXlif4phNzb9LjN1xNzrg2KY_KNNo"
+aemetKey="YOUR_API_KEY"
 #https://www.ine.es/daco/daco42/codmun/codmunmapa.htm
 provinceCode="11"
 townCode="11014" #ProvinceCode+TownCode
@@ -107,7 +107,7 @@ def routineSummary(date,moment,aemetProvince,aemetTown,sunData):
 def speech(txt):
     language = 'es-es'
     spch = gTTS(text=txt, lang=language, slow=False)
-    spch.save("./Audios/heliosays.mp3")
+    spch.save("./Audios/heliosays.mp3") #PATH OF YOUR .MP3 FILE
     playsound("./Audios/heliosays.mp3")
     remove("./Audios/heliosays.mp3")
 
